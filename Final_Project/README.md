@@ -30,7 +30,7 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 |[Test Data](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/test.csv)|Data used to test the model|
 |[Data Doc](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/data_description.txt)|Documentation regarding the data set|
 |[Initial EDA](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Exploratory%20Data%20Analysis.ipynb) | Initial Exploritory Data Analysis|
-|[Attribute Impact Analysis](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Parameter%20Correlation%20Assessment.xlsx)| Summary of findings of attributes correlation/association with SalePrice.
+|[Attribute Impact Analysis](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Parameter%20Correlation%20Assessment.csv)| Summary of findings of attributes correlation/association with SalePrice.
 |Neighboorhood EDA| EDA that explores how neighboorhoods influences attribute correlation/association. (Student vs Residential Housting)|
 |Price Quantile EDA| EDA that explores how pricing quantile influences attribute correlation/association.|
 |Base Model|Naive regresison model to serve as a baseline for future iterations|
