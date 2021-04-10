@@ -1,6 +1,6 @@
 Ames Iowa Housing Price Prediction
 ===========================
-<img align="right" width="120" src="Final_Project/Images/berkeley.png"/>
+<img align="right" width="120" src="./Images/berkeley.png"/>
 
 #### Authors : [Dan Ortiz](https://github.com/cal-dortiz/) | [Dan Weitz](https://www.google.com) 
 
