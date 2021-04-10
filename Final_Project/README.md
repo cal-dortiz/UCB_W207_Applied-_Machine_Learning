@@ -1,6 +1,6 @@
 Ames Iowa Housing Price Prediction
 ===========================
-<img align="right" width="120" src="./images/berkeley.png"/>
+<img align="right" width="120" src="Final_Project/Images/berkeley.png"/>
 
 #### Authors : [Dan Ortiz](https://github.com/cal-dortiz/) | [Dan Weitz](https://www.google.com) 
 
@@ -12,7 +12,7 @@ Section # - Tuesday 4:00pm PDT
 
 ----
 
-<img src="./images/Header.png" align="center">
+<img src="Final_Project/Images/Header.png" align="center">
 
 
 Photo by [David McBee](https://www.pexels.com/@davidmcbee?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com)
@@ -77,7 +77,7 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 
 The final model is an ensemble of nine indipendent models. <br>
 
-<img src="./images/model_vis.png" align="center"> <br>
+<img src="Final_Project/Images/model_vis.png" align="center"> <br>
 
 The estimated housing price is the mean of the output of all nine models.
 
