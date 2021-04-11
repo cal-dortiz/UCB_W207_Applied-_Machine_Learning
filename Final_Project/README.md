@@ -39,25 +39,25 @@ Finally, we selected the 9 attributes that exhibited the strongest correlations 
 
 ## Model Construction
 
-Once cleaned, data for the 9 selected attributes were passed through 9 separate regression-based machine learning models. Additionally, we created a 10th "ensemble" model that was a composite of the nine indipendent models and was selected to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the independent models' outputs, and uses this as a final prediction output. The results observe a significant improvement of the ensemble models performance over any one of the indepednent models . We believe this is due to the different prediction each indipent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
+Once cleaned, data for the 9 selected attributes were passed through 9 separate regression-based machine learning models. Additionally, we created a 10th "ensemble" model that was a composite of eight out of the 9 indipendent models (excluding AdaBoost Regression, which performed notably poorly). The ensemble method was utilized to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the independent models' outputs, and uses this as a final prediction output. The results observe a significant improvement of the ensemble models performance over any one of the indepednent models . We believe this is due to the different prediction each independent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
 
 <img src="./Images/model_vis.png" align="center"> <br>
 
 
-## Model Performance (Nine Independent Models)
+## Model Performance (Nine Independent Models) (Ordered Worst to Best)
 
 
 |Model|Performance (RMSE)|
 |-----|------------------|
-|KNN|0.09322723804857086|
-|Random Forrest|0.09322723804857086|
-|AdaBoost Regressor|0.09322723804857086|
-|Linear Regression|0.026558292311187268|
-|Ridge Regression|0.02648945867526529|
-|Elasticnet Regression|0.026504229524769187|
-|Lasso Model|0.035909927409052335|
-|Gradient Boost|0.03256724983099581|
-|XG Boost|0.028530390677932824|
+|AdaBoost Regressor|0.13895630868758335|
+|KNN|0.09330931188271539|
+|Lasso Model|0.033628673718841345|
+|Gradient Boost|0.029133110725273772|
+|XG Boost|0.027226188758273515|
+|Elasticnet Regression|0.024920651907556823| 
+|OLS Multiple Regression|0.024787912522198273|
+|Ridge Regression|0.02474298302292999|
+|Random Forrest|0.021088824795945284|
 
 
 ## Model Performance (Final Ensemble Model)
@@ -90,7 +90,9 @@ The following files are included in our GitHub repository:
 
 
 ## Findings
-* Learnings
+* The KNN model performed most poorly, which is likely a result of the high dimensionality of the data once the categorical variables had been encoded. On the other hand, the random forest model performed remarkbly well, which may relate to its adeptness at dealing well with large numbers of features. 
+* Three of the "linear regression" models - Elasticnet, Ridge, and OLS multiple regression - all performed very similarly. 
+* The strongest performance, however, was the ensemble method, and this was particularly the case when the Adaboost regresion was omitted from its calculation. 
 
 
 ## Required Technologies
