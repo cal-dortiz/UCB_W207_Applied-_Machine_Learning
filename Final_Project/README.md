@@ -66,12 +66,17 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 
 
 ## Data Cleaning Process
-* What we took out
-* What we altered (setting 0)
+Each of the nine models may have slight adjustments to the describe procedures, however the below process is fairly representitive of the data cleaning procedure.
+
+The initial data set consisted of 80 attribures, including the sale price. Both 'ID' and 'MiscFeature' were immediatly removed from the data set due to a lack of meaningfull contribution to the data set. In addition, we removed 5 outlires ferom the data. These houses had in excess of 4000 sqft of GrLivArea (Per the pencil notes in the data documentation). This resulted in a 25% decrease in regression RMSE.
+
+Once this data was remeoved, the data needed to be further processed to assess missing data and build new attributes from the existing data. The initial swee to correct missing data was done according to the [data documentation](). For some attributes, 'NaN' was a valid data point and indicated the property did not have that feature. These empty data points were processed when converting the ordinal data into a machine readable state. Missing nominal data, was set to 0. This decision was made in the interest of time and is an identified opportunity for future improvements.
+
+
 * How we processed numerical
 * How we processed ordinal
 * How we processed catagorical
-
+*
 ## Model Construction
 * Discuss ensemble models and why we choose it
 
@@ -81,6 +86,12 @@ The final model is an ensemble of nine indipendent models. <br>
 
 The estimated housing price is the mean of the output of all nine models.
 
+## Insights
+* Insight 1
+* Insight 2
+* Insight 3
+
+
 ## Required Technologies
 * Python 3.7
 * Pandas
@@ -88,6 +99,12 @@ The estimated housing price is the mean of the output of all nine models.
 * XGBoost
 * SkLearn
 * MatPlotLib
+
+## Future Work
+* Hypertuning each model
+* Further transformation study
+* Data Processing - Nominal Data
+
 
 ## Credits
 * Data Source: Kaggle
