@@ -1,4 +1,4 @@
-Project 4 - Ames Iowa Housing Price Prediction
+Project 4 - Ames Iowa House Price Prediction
 ===========================
 <img align="right" width="130" src="./Images/berkeley.png"/>
 
