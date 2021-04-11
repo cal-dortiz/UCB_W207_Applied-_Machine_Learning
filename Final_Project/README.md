@@ -36,8 +36,6 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 
 ### Contributing Model Performance 
 
-<center>
-  
 |Model|Performance (RMSE)|
 |-----|------------------|
 |KNN|0.09322723804857086|
@@ -49,8 +47,6 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 |Lasso Model|0.035909927409052335|
 |Gradient Boost|0.03256724983099581|
 |XG Boost|0.028530390677932824|
-
-</center>
 
 ## Files
 
@@ -67,27 +63,20 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 |[Random Forrest](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Random%20Forrest%20Dev.ipynb)|Notebook that explores Random Forrest and Boosted models for development|
 |[Ensemble](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb)|Final Model - Compilation of development models|
 
-
 ## Data Cleaning Process
 Each of the nine models may have slight adjustments to the describe procedures, however the below process is fairly representitive of the data cleaning procedure.
 
 The initial data set consisted of 80 attribures, including the sale price. Both 'ID' and 'MiscFeature' were immediatly removed from the data set due to a lack of meaningfull contribution to the data set. In addition, we removed 5 outlires ferom the data. These houses had in excess of 4000 sqft of GrLivArea (Per the pencil notes in the data documentation). This resulted in a 25% decrease in regression RMSE.
 
-Once this data was remeoved, the data needed to be further processed to assess missing data and build new attributes from the existing data. The initial swee to correct missing data was done according to the [data documentation](). For some attributes, 'NaN' was a valid data point and indicated the property did not have that feature. These empty data points were processed when converting the ordinal data into a machine readable state. Missing nominal data, was set to 0. This decision was made in the interest of time and is an identified opportunity for future improvements.
+Once this data was removed, the data needed to be further processed to assess missing data and build new attributes from the existing data. The initial swee to correct missing data was done according to the [data documentation](). For some attributes, 'NaN' was a valid data point and indicated the property did not have that feature. These empty data points were processed when converting the ordinal data into a machine readable state. Missing nominal data, was set to 0. This decision was made in the interest of time and is an identified opportunity for future improvements.
 
+Numerical data was rescaled in some models and not processed in others. All ordinal data was encoded in a 0-5 scale, preserving the scaling relationship the data points had and catagorical data was encoded with dummy variables.
 
-* How we processed numerical
-* How we processed ordinal
-* How we processed catagorical
-*
 ## Model Construction
-* Discuss ensemble models and why we choose it
-
-The final model is an ensemble of nine indipendent models. <br>
 
 <img src="./Images/model_vis.png" align="center"> <br>
 
-The estimated housing price is the mean of the output of all nine models.
+The final model is an ensemble of nine indipendent models and was selected to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the indipenent models output and outputs this means as the final prediction. The results observe a significant improvement of the ensemble models performance over any one of the indipendent models as demonstrated in the "Contributing Model Performance" section. We believe this is due to the different prediction each indipent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
 
 ## Insights
 * Insight 1
@@ -114,4 +103,6 @@ The estimated housing price is the mean of the output of all nine models.
 * README template: [Cristopher Benge](https://cbenge509.github.io/) | [William Casey King, PhD](https://jackson.yale.edu/person/casey-king/) 
 License
 -------
+<img align="right" width="120" src="./Images/datascience@berkeley.png"/>
+
 Licensed under the MIT License. See [LICENSE](LICENSE.txt) file for more details.
