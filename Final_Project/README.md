@@ -42,7 +42,7 @@ Finally, we selected the 9 attributes that exhibited the strongest correlations 
 
 ## Model Construction
 
-Once cleaned, data for the 9 selected attributes were passed through 9 separate regression-based machine learning models. Additionally, we created a 10th "ensemble" model that was a composite of eight out of the 9 indipendent models (excluding AdaBoost Regression, which performed notably poorly). The ensemble method was utilized to offset the prospect of overfitting from within any single model. Each model varies in its prediction, and the ensemble model takes the mean of the independent models' outputs, and uses this as a final prediction output. The results demonstrate a significant improvement of the ensemble models' performance over those of the indepednent models . We believe this is due to the fact that predictions from each independent model generally varied around the actual house price, and taking an average yielded a closer prediction in relation to the actual house price than any single model could deliver.
+Once cleaned, nine indipendent machine learning models were created. Additionally, we created a tenth ensemble model that was a composite of eight out of the nine indipendent models (excluding AdaBoost Regression, which performed notably poorly). The ensemble method was utilized to offset the prospect of overfitting from within any single model. Each model varies in its prediction, and the ensemble model takes the mean of the independent models' outputs, and uses this as a final prediction output. The results demonstrate a significant improvement of the ensemble models' performance over those of the indepednent models . We believe this is due to the fact that predictions from each independent model generally varied around the actual house price, and taking an average yielded a closer prediction in relation to the actual house price than any single model could deliver.
 
 <img src="./Images/model_vis.png" align="center"> <br>
 
@@ -65,7 +65,7 @@ Once cleaned, data for the 9 selected attributes were passed through 9 separate 
 
 ## Model Performance (Final Ensemble Model)
 
-The ensemble model performed best, with a root-mean-squared-error of **0.01941**. This puts the model performance within the top 200 submissions out of 7894 total submissions.
+The ensemble model performed best, with a root-mean-squared-error of **0.01941**. This puts the model's expected performance within the top 200 submissions out of 7894 total submissions.
 
 
 <img src="./Images/kaggle_leader_board.png" align="center">
