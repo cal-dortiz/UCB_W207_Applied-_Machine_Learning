@@ -38,7 +38,7 @@ We next transformed all of our non-numerical data into numerical form to ensure 
 We also transformed our varaible of interest, SalePrice, into logarithmic form, which resulted in a more normally distributed variable.
 <img width="400" src="./Images/saleprice_logsp.png"/>
 
-Finally, we selected the 9 attributes that exhibited the strongest correlations with sales price as inputs into our models.
+Finally, we selected the 9 attributes that exhibited the strongest correlations with sales price as inputs into our regression models, and all the remaining attributes into our classification models.
 
 ## Model Construction
 
