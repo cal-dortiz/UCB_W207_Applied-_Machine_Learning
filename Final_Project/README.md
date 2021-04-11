@@ -113,7 +113,6 @@ The following files are included in our GitHub repository:
 ## Credits
 * Data Source: [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 * README template: [Cristopher Benge](https://cbenge509.github.io/) | [William Casey King, PhD](https://jackson.yale.edu/person/casey-king/) 
-License
 -------
 <img align="right" width="250" src="./Images/datascience@berkeley.png"/>
 
