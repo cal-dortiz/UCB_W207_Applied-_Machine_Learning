@@ -8,7 +8,7 @@ Ames Iowa Housing Price Prediction
 U.C. Berkeley, Masters in Information & Data Science program - [datascience@berkeley](https://datascience.berkeley.edu/) 
 
 Spring 2021, W207 - Machine Learning - D. Schioberg, PhD <br>
-Section # - Tuesday 4:00pm PDT
+Section #3 - Tuesday 4:00pm PDT
 
 ----
 
