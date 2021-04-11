@@ -36,6 +36,8 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 
 ### Contributing Model Performance 
 
+<center>
+  
 |Model|Performance (RMSE)|
 |-----|------------------|
 |KNN|0.09322723804857086|
@@ -48,6 +50,7 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 |Gradient Boost|0.03256724983099581|
 |XG Boost|0.028530390677932824|
 
+</center>
 
 ## Files
 
