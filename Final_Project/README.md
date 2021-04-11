@@ -19,25 +19,25 @@ Photo by [David McBee](https://www.pexels.com/@davidmcbee?utm_content=attributio
 
 ## Description
 
-### About
+## About
 This repo contains Ortiz and Weitz's housing price predictive model built off of the [Ames Housing Data](http://jse.amstat.org/v19n3/decock.pdf) compiled by compiled by Dean De Cock. Data was sourced from [Kaggle](https://www.kaggle.com/).
 
-### Goal
+## Goal
 Develope a model that predicts the housing price for each individual I.D. in the Test Data
 
-### Key Performance Indicator
+## Key Performance Indicator
 Model performance will be deteremend by Root Mean Square Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
 
-### Final Ensemble Model Performance
+## Final Ensemble Model Performance
 
-[Ensemble Model](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb) performed with a root-mean-squared-error of 0.02139. This puts the model performance within the top 200 submissions out of 7894 total submissions.
+[Ensemble Model](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb) performed with a root-mean-squared-error of **0.02139**. This puts the model performance within the top 200 submissions out of 7894 total submissions.
 
 
 <img src="./Images/kaggle_leader_board.png" align="center">
 Kaggle Leaderboard 4/10/21
 
 
-### Contributing Model Performance 
+## Contributing Model Performance 
 
 |Model|Performance (RMSE)|
 |-----|------------------|
