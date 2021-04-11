@@ -44,7 +44,7 @@ Finally, we selected the 9 attributes that exhibited the strongest correlations 
 
 Once cleaned, nine indipendent machine learning models were created. Additionally, we created a tenth ensemble model that was a composite of eight out of the nine indipendent models (excluding AdaBoost Regression, which performed notably poorly). The ensemble method was utilized to offset the prospect of overfitting from within any single model. Each model varies in its prediction, and the ensemble model takes the mean of the independent models' outputs, and uses this as a final prediction output. The results demonstrate a significant improvement of the ensemble models' performance over those of the indepednent models . We believe this is due to the fact that predictions from each independent model generally varied around the actual house price, and taking an average yielded a closer prediction in relation to the actual house price than any single model could deliver.
 
-<img src="./Images/model_vis.png" align="center"> <br>
+<img src="./Images/model_vis_1.png" align="center"> <br>
 
 
 ## Model Performance (Nine Independent Models) (Ordered Worst to Best)
