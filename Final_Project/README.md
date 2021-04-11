@@ -5,7 +5,7 @@ Ames Iowa Housing Price Prediction
 #### Authors : [Dan Ortiz](https://github.com/cal-dortiz/) | [Dan Weitz](https://github.com/djweitz) 
 
 
-U.C. Berkeley, Masters in Information & Data Science program - [datascience@berkeley](https://datascience.berkeley.edu/) 
+U.C. Berkeley, Master of Information & Data Science Program - [datascience@berkeley](https://datascience.berkeley.edu/) 
 
 Spring 2021, W207 - Machine Learning - D. Schioberg, PhD <br>
 Section #3 - Tuesday, 4:00pm PDT
