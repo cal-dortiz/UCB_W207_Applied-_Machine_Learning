@@ -32,7 +32,10 @@ Model performance will be deteremend by Root Mean Square Error (RMSE) between th
 
 [Ensemble Model](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb) performed with a root-mean-squared-error of 0.02139. This puts the model performance within the top 200 submissions out of 7894 total submissions.
 
-[Image of Leaderboard]
+
+<img src="./Images/kaggle_leader_board.png" align="center">
+Kaggle Leaderboard 4/10/21
+
 
 ### Contributing Model Performance 
 
