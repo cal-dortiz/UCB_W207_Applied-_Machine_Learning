@@ -20,24 +20,32 @@ Photo by [David McBee](https://www.pexels.com/@davidmcbee?utm_content=attributio
 ## Description
 
 ## About
-This repo contains Ortiz and Weitz's housing price predictive model built off of the [Ames Housing Data](http://jse.amstat.org/v19n3/decock.pdf) compiled by compiled by Dean De Cock. Data was sourced from [Kaggle](https://www.kaggle.com/).
+This GitHub repo contains files pertaining to Daniel Ortiz and Daniel Weitz's predictive model for housing prices based on the [Ames Housing dataset](http://jse.amstat.org/v19n3/decock.pdf) compiled by compiled by Dean De Cock. Data was sourced from [Kaggle](https://www.kaggle.com/).
 
 ## Goal
-Develope a model that predicts the housing price for each individual I.D. in the Test Data
+Develop a model or set of models that utilize supervised learning techniques to either individually or collectively predict the housing prices for each home in the test dataset with a high degree of accuracy. 
 
 ## Key Performance Indicator
-Model performance will be deteremend by Root Mean Square Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price.
+Model performance will be determined by Root Mean Square Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. For the purposes of this exercise, a lower RMSE will be deemed to represent superior performance compared to a higher RMSE.
 
-## Final Ensemble Model Performance
+## Data Cleaning Process
+After loading the data, we determined that the training data consisted of 80 attributes, including the sale price, while the testing data comprised 79 attributes (all but the sales price). Because our objective was to predict the sales price, we could not use the test data to confirm/refute our predictions - and as a result we use the training data to conduct all of our analysis, and separate the data into training/testing subcomponents as appropriate. 
 
-[Ensemble Model](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb) performed with a root-mean-squared-error of **0.02139**. This puts the model performance within the top 200 submissions out of 7894 total submissions.
+To clean the data, we first removed categories that did not exhibit a meaningful relationship to sales price (House identifyier, miscellaneous features, pool quality, presence of an alley, presence of a fence, and total basement squrae footage). We additionally removed several outliers from the data per the recommendation of the data set documentation (where houses were in excess of 4000 sqft of GrLivArea). Removing the outliers alone accounted for a ~25% decrease in our overall RMSE. We also created a new feature for total square footage that combined existing features (square footage for the first and second floor of the house) in order to capture their potential explanatory power with respect ot sales price while removing potential multicollinearity among the variables.
+
+We next transformed all of our non-numerical data into numerical form to ensure it could be used as input into our machine learning algorithm. For data where the categorical data was ordinal in nature, we replaced the categories with numerical data in a consistent manner. For categories that were purely text-based (without ordinal qualities), we employed label encoding to convert the data into a machine readable state. In certain cases, missing nominal data, was set to 0. This decision was made in the interest of time and based on the author's judgment that it represented a reasonably accurate representation of the missing data, though this presents an opportunity for future improvement. 
+
+Finally, we selected the 9 attributes that exhibited the strongest correlations with sales price as inputs into our models.
+
+## Model Construction
+
+Once cleaned, data for the 9 selected attributes were passed through 9 separate regression-based machine learning models. Additionally, we created a 10th "ensemble" model that was a composite of the nine indipendent models and was selected to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the independent models' outputs, and uses this as a final prediction output. The results observe a significant improvement of the ensemble models performance over any one of the indepednent models . We believe this is due to the different prediction each indipent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
+
+<img src="./Images/model_vis.png" align="center"> <br>
 
 
-<img src="./Images/kaggle_leader_board.png" align="center">
-Kaggle Leaderboard 4/10/21
+## Model Performance (Nine Independent Models)
 
-
-## Contributing Model Performance 
 
 |Model|Performance (RMSE)|
 |-----|------------------|
@@ -51,43 +59,37 @@ Kaggle Leaderboard 4/10/21
 |Gradient Boost|0.03256724983099581|
 |XG Boost|0.028530390677932824|
 
+
+## Model Performance (Final Ensemble Model)
+
+Ensemble Model performed with a root-mean-squared-error of **0.01941**. This puts the model performance within the top 200 submissions out of 7894 total submissions.
+
+
+<img src="./Images/kaggle_leader_board.png" align="center">
+Kaggle Leaderboard 4/10/21
+
+
 ## Files
+
+The following files are included in our GitHub repository: 
 
 |Name|Description|
 |----|-----------|
 |[Train Data](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/train.csv) |Data used to train the model|
 |[Test Data](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/test.csv)|Data used to test the model|
-|[Data Doc](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/data_description.txt)|Documentation regarding the data set|
 |[Initial EDA](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Exploratory%20Data%20Analysis.ipynb) | Initial Exploritory Data Analysis|
+|[Data Cleaning and Feature Engineering](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Data%20Cleaning%20and%20Feature%20Engineering.ipynb)|Code to clean data and transform features in preparation for model analysis|
+|[Regression Models]() |Notebook that explores 10 different regression models and corresponding RMSEs|
+|[Data Doc](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/data_description.txt)|Documentation regarding the data set|
 |[Attribute Impact Analysis](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Parameter%20Correlation%20Assessment.csv)| Summary of findings of attributes correlation/association with SalePrice.|
 |[Transformation Study](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Transformations%20Study.ipynb)|Notebook to study transformations of nominal attributes|
-|[Regression Models]() |Notebook that explores different regression models for development|
-|[KNN Model](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/KNN%20Model.ipynb)|Notebook that explores KNN models for development|
-|[Random Forrest](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Random%20Forrest%20Dev.ipynb)|Notebook that explores Random Forrest and Boosted models for development|
-|[Ensemble](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Model%20Files/Ensemble.ipynb)|Final Model - Compilation of development models|
-
-## Data Cleaning Process
-Each of the nine models may have slight adjustments to the describe procedures, however the below process is fairly representitive of the data cleaning procedure.
-
-The initial data set consisted of 80 attribures, including the sale price. Both 'ID' and 'MiscFeature' were immediatly removed from the data set due to a lack of meaningfull contribution to the data set. In addition, we removed 5 outlires ferom the data. These houses had in excess of 4000 sqft of GrLivArea (Per the pencil notes in the data documentation). This resulted in a 25% decrease in regression RMSE.
-
-Once this data was removed, the data needed to be further processed to assess missing data and build new attributes from the existing data. The initial swee to correct missing data was done according to the [data documentation](). For some attributes, 'NaN' was a valid data point and indicated the property did not have that feature. These empty data points were processed when converting the ordinal data into a machine readable state. Missing nominal data, was set to 0. This decision was made in the interest of time and is an identified opportunity for future improvements.
-
-Numerical data was rescaled in some models and not processed in others. All ordinal data was encoded in a 0-5 scale, preserving the scaling relationship the data points had and catagorical data was encoded with dummy variables.
 
 
 <img width="400" src="./Images/saleprice_logsp.png"/>
 
-[ADD GRAPHS OF Y AND LOG Y. DISCUSS WHY WE LOG TRANSFORMED]
 
 
-## Model Construction
-
-<img src="./Images/model_vis.png" align="center"> <br>
-
-The final model is an ensemble of nine indipendent models and was selected to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the indipenent models output and outputs this means as the final prediction. The results observe a significant improvement of the ensemble models performance over any one of the indipendent models as demonstrated in the "Contributing Model Performance" section. We believe this is due to the different prediction each indipent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
-
-## Learnings
+## Findings
 * Learnings
 
 
