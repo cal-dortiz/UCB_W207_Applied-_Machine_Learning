@@ -35,6 +35,9 @@ To clean the data, we first removed categories that did not exhibit a meaningful
 
 We next transformed all of our non-numerical data into numerical form to ensure it could be used as input into our machine learning algorithm. For data where the categorical data was ordinal in nature, we replaced the categories with numerical data in a consistent manner. For categories that were purely text-based (without ordinal qualities), we employed label encoding to convert the data into a machine readable state. In certain cases, missing nominal data, was set to 0. This decision was made in the interest of time and based on the author's judgment that it represented a reasonably accurate representation of the missing data, though this presents an opportunity for future improvement. 
 
+We also transformed our varaible of interest, SalePrice, into logarithmic form, which resulted in a more normally distributed variable.
+<img width="400" src="./Images/saleprice_logsp.png"/>
+
 Finally, we selected the 9 attributes that exhibited the strongest correlations with sales price as inputs into our models.
 
 ## Model Construction
@@ -83,9 +86,6 @@ The following files are included in our GitHub repository:
 |[Data Doc](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/183fae86e5c0acd1937557404734a1df7b4172d4/Final_Project/Data/data_description.txt)|Documentation regarding the data set|
 |[Attribute Impact Analysis](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Parameter%20Correlation%20Assessment.csv)| Summary of findings of attributes correlation/association with SalePrice.|
 |[Transformation Study](https://github.com/cal-dortiz/W207_Applied-_Machine_Learning/blob/main/Final_Project/Data%20Exploration%20Files/Transformations%20Study.ipynb)|Notebook to study transformations of nominal attributes|
-
-
-<img width="400" src="./Images/saleprice_logsp.png"/>
 
 
 
