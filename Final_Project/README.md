@@ -44,6 +44,7 @@ Finally, we selected the 9 attributes that exhibited the strongest correlations 
 
 Once the data had been cleaned and all features transformed, nine independent machine learning models were created. Additionally, a tenth ensemble model was created that was a composite of eight out of the nine independent models (excluding AdaBoost Regression, which performed notably poorly). The ensemble method was utilized to offset the prospect of overfitting from biasing any single model. Since each model varies in its predicted sale price, the ensemble model takes the mean of the independent models' outputs, and uses this calculation as a final prediction output. The results demonstrate a significant improvement in performance (i.e. lower RMSE) compared to the independent models. We believe this is due to the fact that predictions from each independent model generally vary around the actual sale price, and taking an average yielded a closer prediction in relation to the actual house prices than any single model could consistently deliver.
 
+
 <img src="./Images/model_vis.png" align="center"> <br>
 
 
