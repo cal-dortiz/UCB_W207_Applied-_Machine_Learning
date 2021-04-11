@@ -1,8 +1,8 @@
 Ames Iowa Housing Price Prediction
 ===========================
-<img align="right" width="120" src="./Images/berkeley.png"/>
+<img align="right" width="130" src="./Images/berkeley.png"/>
 
-#### Authors : [Dan Ortiz](https://github.com/cal-dortiz/) | [Dan Weitz](https://www.google.com) 
+#### Authors : [Dan Ortiz](https://github.com/cal-dortiz/) | [Dan Weitz](https://github.com/djweitz) 
 
 
 U.C. Berkeley, Masters in Information & Data Science program - [datascience@berkeley](https://datascience.berkeley.edu/) 
@@ -75,16 +75,20 @@ Once this data was removed, the data needed to be further processed to assess mi
 
 Numerical data was rescaled in some models and not processed in others. All ordinal data was encoded in a 0-5 scale, preserving the scaling relationship the data points had and catagorical data was encoded with dummy variables.
 
+
+<img width="400" src="./Images/saleprice_logsp.png"/>
+
+[ADD GRAPHS OF Y AND LOG Y. DISCUSS WHY WE LOG TRANSFORMED]
+
+
 ## Model Construction
 
 <img src="./Images/model_vis.png" align="center"> <br>
 
 The final model is an ensemble of nine indipendent models and was selected to prevent overfitting of a single model. Each model veries in its prediction, the ensemble takes the mean of the indipenent models output and outputs this means as the final prediction. The results observe a significant improvement of the ensemble models performance over any one of the indipendent models as demonstrated in the "Contributing Model Performance" section. We believe this is due to the different prediction each indipent model produced varried around the actual house price, and taking the average yielded a closer prediction more consistantly then any single model.
 
-## Insights
-* Insight 1
-* Insight 2
-* Insight 3
+## Learnings
+* Learnings
 
 
 ## Required Technologies
@@ -96,16 +100,20 @@ The final model is an ensemble of nine indipendent models and was selected to pr
 * MatPlotLib
 
 ## Future Work
-* Hypertuning each model
-* Further transformation study
-* Data Processing - Nominal Data
-
+1. Hypertuning each model
+    *  There are opportunities to hypertune each model for better performance. Hypertuning each model will lead to a higher performing ensemble model. This includes normalizing and scaling data to exploring different combinations of attributes.
+2. Further transformation study
+    *  There are opportunities to investigate additional data transforms that may improve model performance. In addition, there are opportunities to explore the development of new attributes based of off existing attributes.
+3. Data Processing - Nominal Data
+    * We belive there are opportunities to develop ways to handel missing nominal data in a way that would boost model performance. This is an area we highly recommend exploring in future work.
+4. Neighboorhood Assessment
+    * Ames is a college town and such, certain neighboorhoods may have housing that is geared towards the college studend demographic. This insight may lead to further model development that captures this uniqness. It is worth further study.
 
 ## Credits
-* Data Source: Kaggle
+* Data Source: [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 * README template: [Cristopher Benge](https://cbenge509.github.io/) | [William Casey King, PhD](https://jackson.yale.edu/person/casey-king/) 
 License
 -------
-<img align="right" width="120" src="./Images/datascience@berkeley.png"/>
+<img align="right" width="250" src="./Images/datascience@berkeley.png"/>
 
 Licensed under the MIT License. See [LICENSE](LICENSE.txt) file for more details.
