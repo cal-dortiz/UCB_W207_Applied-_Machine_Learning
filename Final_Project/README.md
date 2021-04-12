@@ -56,20 +56,20 @@ Once the data had been cleaned and all features transformed, nine independent ma
 
 |Model|Performance (RMSE)|
 |-----|------------------|
-|AdaBoost|0.13895630868758335|
-|KNN|0.09330931188271539|
-|Lasso Model|0.033628673718841345|
-|Gradient Boost|0.029133110725273772|
-|XG Boost|0.027226188758273515|
-|Elasticnet Regression|0.024920651907556823| 
-|OLS Multiple Regression|0.024787912522198273|
-|Ridge Regression|0.02474298302292999|
-|Random Forest|0.021088824795945284|
+|KNN|0.09358343836948645|
+|AdaBoost|0.0793968347837942|
+|Lasso Model|0.035909927409052286|
+|Gradient Boost|0.032302513360016355|
+|XG Boost|0.028530388967825882|
+|Random Forest|0.027816026500681688|
+|OLS Multiple Regression|0.02655829231118724|
+|Elasticnet Regression|0.02650422952476914| 
+|Ridge Regression|0.026489458629790748|
 
 
 ## Model Performance (Final Ensemble Model)
 
-The ensemble model performed best of all models, with a root-mean-squared-error of **0.01941**. This puts the model's expected performance within the top 200 submissions to Kaggle out of 7894 total submissions.
+The ensemble model performed best of all models, with a root-mean-squared-error of **0.02166**. This puts the model's expected performance within the top 200 submissions to Kaggle out of 7894 total submissions.
 
 
 <img src="./Images/kaggle_leader_board.png" align="center">
@@ -91,9 +91,9 @@ The following files are included in our GitHub repository:
 
 
 ## Findings
-* The KNN model performed worst, which is likely a result of the high dimensionality of the data once the categorical variables had been encoded. On the other hand, the random forest model performed remarkably well, which may relate to its adeptness at dealing with large numbers of features. 
+* The KNN model performed worst, which is likely a result of the high dimensionality of the data once the categorical variables had been encoded. On the other hand, the random forest model performed reasonably well, which may relate to its adeptness at dealing with large numbers of features. 
 * Three of the "linear regression" models - Elasticnet, Ridge, and OLS multiple regression - all performed very similarly. 
-* The strongest performance, however, was the ensemble method, and this was particularly the case when the Adaboost regression was omitted from its calculation. 
+* The strongest performance, however, was the ensemble method, and this was particularly the case when the Adaboost regression was omitted from its calculation.
 
 
 ## Required Technologies
