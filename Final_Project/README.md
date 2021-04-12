@@ -47,7 +47,7 @@ Once the data had been cleaned and all features transformed, nine independent ma
 
 
 
-<img src="./Images/model_vis.png" align="center"> <br>
+<img src="./Images/model_vis_1.png" align="center"> <br>
 
 
 
