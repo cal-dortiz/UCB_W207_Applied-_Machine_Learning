@@ -1,4 +1,4 @@
-Project 4 - Ames House Price Prediction
+Project 4 - House Prices - Advanced Regression Techniques
 ===========================
 <img align="right" width="130" src="./Images/berkeley.png"/>
 
