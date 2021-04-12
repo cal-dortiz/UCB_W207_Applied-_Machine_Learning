@@ -36,6 +36,7 @@ To clean the data set, we first removed categories that did not exhibit a meanin
 We next transformed all of our non-numerical data into numerical form to ensure they could be used as inputs into our machine learning algorithm. For attributes whose categorical data was ordinal in nature, we replaced the categories with numerical values in a consistent manner. For categories that were purely categorical (i.e. not ordinal), we employed label encoding to convert the data into a machine-readable state. In certain cases, missing data values were set to 0. This decision was made in the interest of time and based on the authors' judgment that these values represented a reasonably accurate representation of the missing data. That said, this may represent an opportunity for future students to adopt more nuanced approaches. 
 
 We also transformed our variable of interest, SalePrice, into logarithmic form, which resulted in the data values becoming more normally distributed.
+
 <img width="400" src="./Images/saleprice_logsp.png"/>
 
 Finally, we selected the 9 attributes that exhibited the strongest correlations with sales price as inputs into our regression models, and all attributes were used as inputs into our classification models.
